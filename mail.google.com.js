@@ -1,4 +1,7 @@
 $(document).ready(function() {
+
+  // automatically fix obfuscated email addresses pasted into to/cc/bcc fields
+
   $("textarea[name=to], textarea[name=cc], textarea[name=bcc]").live('blur', function(e){
     var text = $(this).val();
     text = text.replace(" at ", "@");
